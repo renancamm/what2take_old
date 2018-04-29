@@ -34,8 +34,8 @@ class Travel(models.Model):
         (14, '+14 dias'),
     )
     SEX_CHOICES = (
-        ('m', 'male'),
-        ('f', 'female'),
+        ('m', 'Homem'),
+        ('f', 'Mulher'),
     )
 
     temperature = models.IntegerField(choices=TEMPERATURE_CHOICES, default=20)
