@@ -3,7 +3,16 @@ from .models import Category, Product, Travel
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'category')
+    list_display = (
+        'name',
+        'category',
+        'sex',
+        'multiply_by_days',
+        'qtd_cold_base',
+        'qtd_cool_base',
+        'qtd_warm_base',
+        'qtd_hot_base'
+    )
 
 
 admin.site.register(Category)
