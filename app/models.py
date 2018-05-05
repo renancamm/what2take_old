@@ -11,15 +11,11 @@ class Category(models.Model):
 class Product(models.Model):
     DAYS_BASE = 7
     DAYS_LIMIT = 11
-    SEX_CHOICES = (
-        ('m', 'Homem'),
-        ('f', 'Mulher'),
-        ('u', 'Unisex'),
-    )
 
     name = models.CharField(max_length=50)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    sex = models.CharField(max_length=1, choices=SEX_CHOICES, default='u')
+    for_male = models.BooleanField(default=True)
+    for_female = models.BooleanField(default=True)
     multiply_by_days = models.BooleanField(default=True)
 
     qtd_cold_base = models.FloatField(default=0)
@@ -70,7 +66,7 @@ class Backpack(models.Model):
         (20, 'Quente'),
         (30, 'Muito quente'),
     )
-    LENGTH_CHOICES = (
+    DAYS_CHOICES = (
         (3, '3 dias'),
         (7, '7 dias'),
         (11, '11 dias'),
@@ -82,13 +78,36 @@ class Backpack(models.Model):
     )
 
     temp = models.IntegerField(choices=TEMP_CHOICES, default=20)
-    length = models.IntegerField(choices=LENGTH_CHOICES, default=7)
+    days = models.IntegerField(choices=DAYS_CHOICES, default=7)
     sex = models.CharField(max_length=1, choices=SEX_CHOICES, default='f')
-    products = models.ManyToManyField(Product)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["created_at"]
 
+    def add_products(self):
+        if self.sex == 'm':
+            products = Product.objects.filter(for_male=True)
+
+        elif self.sex == 'f':
+            products = Product.objects.filter(for_female=True)
+
+        # Loop through all the product catalog filtered by gender
+        for product in products:
+            qtd = product.get_quantity(self.temp, self.days)
+
+            # Add products that have at lease 1 qtd
+            if qtd > 0:
+                BackpackItem.objects.create(backpack=self, product=product, qtd=qtd)
+
     def __str__(self):
-        return '%s %s %s %s' % (self.temp, self.length, self.sex, self.created_at)
+        return '%s %s %s %s' % (self.temp, self.days, self.sex, self.created_at)
+
+
+class BackpackItem(models.Model):
+    backpack = models.ForeignKey(Backpack, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    qtd = models.IntegerField(default=0)
+
+    def __str__(self):
+        return '%sx %s' % (self.qtd, self.product)

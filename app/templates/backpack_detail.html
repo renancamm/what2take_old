@@ -3,10 +3,21 @@
 {% block content %}
 <h1>Come closer, take a look in my backpack</h1>
 
-<p>Temp: {{ context.temp }}</p>
-<p>Length: {{ context.length }}</p>
-<p>Sex: {{ context.sex }}</p>
-<p>Created at: {{ context.created_at }}</p>
+<p>Temp: {{ context.backpack.temp }}</p>
+<p>Days: {{ context.backpack.days }}</p>
+<p>Sex: {{ context.backpack.sex }}</p>
+<p>Created at: {{ context.backpack.created_at }}</p>
+
+</hr>
+
+
+<p>Backpack Items:</p>
+<ul>
+{% for item in context.items %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+
 
 <a href="{% url 'backpack-new' %}">Go to home.</a>
 {% endblock %}

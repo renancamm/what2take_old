@@ -6,4 +6,4 @@ class BackpackForm(forms.ModelForm):
 
     class Meta:
         model = Backpack
-        fields = ('temp', 'length', 'sex')
+        fields = ('temp', 'days', 'sex')
