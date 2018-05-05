@@ -63,16 +63,12 @@ class Product(models.Model):
         return self.name
 
 
-class Travel(models.Model):
-    TEMPERATURE_CHOICES = (
+class Backpack(models.Model):
+    TEMP_CHOICES = (
         (0, 'Muito frio'),
         (10, 'Frio'),
         (20, 'Quente'),
         (30, 'Muito quente'),
-    )
-    RAINY_CHOICES = (
-        (0, 'Nenhuma chance'),
-        (100, 'Chuva com certeza'),
     )
     LENGTH_CHOICES = (
         (3, '3 dias'),
@@ -85,8 +81,7 @@ class Travel(models.Model):
         ('f', 'Mulher'),
     )
 
-    temperature = models.IntegerField(choices=TEMPERATURE_CHOICES, default=20)
-    rainy = models.IntegerField(choices=RAINY_CHOICES, default=0)
+    temp = models.IntegerField(choices=TEMP_CHOICES, default=20)
     length = models.IntegerField(choices=LENGTH_CHOICES, default=7)
     sex = models.CharField(max_length=1, choices=SEX_CHOICES, default='f')
     products = models.ManyToManyField(Product)
@@ -96,4 +91,4 @@ class Travel(models.Model):
         ordering = ["created_at"]
 
     def __str__(self):
-        return '%s %s %s %s %s' % (self.temperature, self.rainy, self.length, self.sex, self.created_at)
+        return '%s %s %s %s' % (self.temp, self.length, self.sex, self.created_at)

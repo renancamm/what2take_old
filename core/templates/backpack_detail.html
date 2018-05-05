@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Come closer, take a look in my backpack</h1>
+
+<p>Temp: {{ context.temp }}</p>
+<p>Length: {{ context.length }}</p>
+<p>Sex: {{ context.sex }}</p>
+<p>Created at: {{ context.created_at }}</p>
+
+<a href="{% url 'backpack-new' %}">Go to home.</a>
+{% endblock %}
