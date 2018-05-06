@@ -16,13 +16,16 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
 
+class BackpackItemInline(admin.TabularInline):
+    model = BackpackItem
+
+
 class BackpackAdmin(admin.ModelAdmin):
     inlines = [
-        BackpackItem,
+        BackpackItemInline,
     ]
 
 
 admin.site.register(Category)
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Backpack)
-admin.site.register(BackpackItem)
+admin.site.register(Backpack, BackpackAdmin)
