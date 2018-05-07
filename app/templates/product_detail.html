@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>O que levar – Sua mochila - Produto</title>
+{% endblock %}
+
+{% block content %}
+
+<a href="{% url 'backpack-detail' context.backpack.pk %}">← Voltar</a>
+
+<p>{{ context.product.category }}</p>
+<h1>{{ context.product.name }}</h1>
+<div>
+    <img src="{{context.product.image.url}}" height="300px">
+</div>
+<p>{{ context.product.description }}</p>
+
+{% endblock %}

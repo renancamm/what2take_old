@@ -10,7 +10,7 @@
     <div class="col-6 jumbotron">
 
         <a href="{% url 'backpack-new' %}">← Voltar</a>
-        <h1 class="display-3">O que levar</h1>
+        <h2 class="display-3">O que levar</h2>
 
         <hr>
 
@@ -28,7 +28,7 @@
         <h2>Sua mochila</h2>
         <ul>
             {% for item in context.items %}
-                <li>{{ item }}</li>
+                <li><a href="{% url 'product-detail' context.backpack.pk item.product.pk %}">{{ item }}</a></li>
             {% endfor %}
         </ul>
     </div>

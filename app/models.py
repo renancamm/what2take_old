@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import mark_safe
 
 
 class Category(models.Model):
@@ -14,6 +15,9 @@ class Product(models.Model):
 
     name = models.CharField(max_length=50)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    description = models.TextField(blank=True, null=True)
+    image = models.ImageField(upload_to='product/', default='product-placeholder.png')
+
     for_male = models.BooleanField(default=True)
     for_female = models.BooleanField(default=True)
     multiply_by_days = models.BooleanField(default=True)
@@ -57,6 +61,19 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    # Show image on Admin interface
+    def image_thumb(self, size):
+        return mark_safe('<img src="%s" width="%s" />' % (self.image.url, size))
+
+    def image_thumb_small(self):
+        return self.image_thumb('50')
+
+    def image_thumb_big(self):
+        return self.image_thumb('300')
+
+    image_thumb_small.short_description = 'Thumb'
+    image_thumb_big.short_description = 'Thumb'
 
 
 class Backpack(models.Model):
