@@ -25,12 +25,38 @@
 
 <div class="row justify-content-center">
     <div class="col-6">
-        <h2>Sua mochila</h2>
-        <ul>
-            {% for item in context.items %}
-                <li><a href="{% url 'product-detail' context.backpack.pk item.product.pk %}">{{ item }}</a></li>
+        <h3>Sua mochila</h3>
+
+            {% for category in context.categories %}
+                <h5>{{ category.name }}</h5>
+                <div style="display: flex; align-items: left; flex-wrap: wrap;">
+                {% for item in context.items %}
+                    {% if item.product.category == category %}
+
+
+                    <div class="card m-1" style="width: 125px;">
+                      <img src="{{ item.product.image.url }}" class="card-img-top" alt="{{ item.product.name }}" style="object-fit: contain; height: 100px; padding: 10px;">
+                      <div class="card-body">
+                        <h6 class="card-title">
+                        <a href="{% url 'product-detail' context.backpack.pk item.product.pk %}">
+                        {{ item.product.name }}
+                        </a>
+                        </h6>
+                        <p class="card-text small">x{{ item.qtd }}</p>
+                      </div>
+                    </div>
+
+
+                    {% endif %}
+                {% endfor %}
+                </div>
+            <hr class="my-5">
             {% endfor %}
-        </ul>
+
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Salvar?</button>
+            <hr class="my-5">
+
     </div>
 </div>
 

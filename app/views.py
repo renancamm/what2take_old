@@ -2,7 +2,7 @@ from django.http import Http404
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .forms import BackpackForm
-from .models import Product, Backpack
+from .models import Category, Product, Backpack
 
 
 def backpack_new(request):
@@ -22,7 +22,8 @@ def backpack_detail(request, backpack_id):
     try:
         backpack = Backpack.objects.get(pk=backpack_id)
         items = backpack.backpackitem_set.all()
-        context = {'backpack': backpack, 'items': items}
+        categories = Category.objects.all()
+        context = {'backpack': backpack, 'items': items, 'categories': categories}
     except backpack.DoesNotExist:
         raise Http404("Backpack does not exist")
 
