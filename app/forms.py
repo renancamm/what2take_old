@@ -21,18 +21,10 @@ class BackpackForm(forms.ModelForm):
         ('f', 'Mulher'),
     )
 
-    temp = forms.ChoiceField(choices=TEMP_CHOICES, widget=forms.RadioSelect())
-    days = forms.ChoiceField(choices=DAYS_CHOICES, widget=forms.RadioSelect())
-    sex = forms.ChoiceField(choices=SEX_CHOICES, widget=forms.RadioSelect())
+    temp = forms.ChoiceField(label='Temperatura', choices=TEMP_CHOICES, widget=forms.RadioSelect())
+    days = forms.ChoiceField(label='Dias', choices=DAYS_CHOICES, widget=forms.RadioSelect())
+    sex = forms.ChoiceField(label='Sexo', choices=SEX_CHOICES, widget=forms.RadioSelect())
 
     class Meta:
         model = Backpack
         fields = ('temp', 'days', 'sex')
-        labels = {
-            'temp': "Temperatura",
-            'days': "Dias",
-            'sex': "Sexo"
-        }
-        widget = {
-            'temp': forms.RadioSelect()
-        }
