@@ -10,12 +10,13 @@ class ProductAdmin(admin.ModelAdmin):
         'for_male',
         'for_female',
         'multiply_by_days',
-        'qtd_cold_base',
-        'qtd_cool_base',
-        'qtd_warm_base',
-        'qtd_hot_base',
+        'qtd_cold',
+        'qtd_cool',
+        'qtd_warm',
+        'qtd_hot',
     )
     list_display_links = ('name',)
+    ordering = ('category', 'name')
     fieldsets = (
         (None, {
             'fields': (
@@ -36,10 +37,17 @@ class ProductAdmin(admin.ModelAdmin):
             'description': 'Set quantity based on a 7 days trip',
             'fields': (
                 'multiply_by_days',
-                'qtd_cold_base',
-                'qtd_cool_base',
-                'qtd_warm_base',
-                'qtd_hot_base',
+                'qtd_cold',
+                'qtd_cool',
+                'qtd_warm',
+                'qtd_hot',
+            )
+        }),
+        ('Backpack options', {
+            'description': 'Use these if this product is a Backpack',
+            'fields': (
+                'is_backpack',
+                'trip_duration',
             )
         })
 

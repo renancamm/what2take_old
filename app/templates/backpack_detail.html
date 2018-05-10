@@ -27,6 +27,23 @@
     <div class="col-12">
         <h3>Sua mochila</h3>
 
+            <h5>Mochila</h5>
+                    <div class="card m-1" style="width: 146px;">
+                      <img src="{{ context.backpack.product.image.url }}" class="card-img-top" alt="{{ context.backpack.product.name }}" style="object-fit: contain; height: 100px; padding: 10px;">
+                      <div class="card-body">
+                        <h6 class="card-title">
+                        <a href="{% url 'product-detail' context.backpack.pk context.backpack.product.pk %}">
+                        {{ context.backpack.product.name }}
+                        </a>
+                        </h6>
+                      </div>
+                    </div>
+
+
+
+
+
+
             {% for category in context.categories %}
                 <h5>{{ category.name }}</h5>
                 <div style="display: flex; align-items: left; flex-wrap: wrap;">
