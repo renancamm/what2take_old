@@ -84,20 +84,20 @@ class Backpack(models.Model):
         elif self.sex == 'f':
             products = Product.objects.filter(for_female=True)
 
-        # Get all backpack products from the list and pop it out
-        products_is_backpacks = products.filter(is_backpack=True)
-        products.exclude(is_backpack=True)
+        # Split what is product item and what is a backpack item
+        products_backpacks = products.exclude(is_backpack=False)
+        products_items = products.exclude(is_backpack=True)
 
         # Get the first backpack that match the trip duration
         if self.days <= 3:
-            self.product = products_is_backpacks.filter(trip_duration__lte=3)[0]
+            self.product = products_backpacks.get(trip_duration__lte=3)
         elif self.days <= 7:
-            self.product = products_is_backpacks.filter(trip_duration__lte=7)[0]
+            self.product = products_backpacks.get(trip_duration__lte=7)
         else:
-            self.product = products_is_backpacks.filter(trip_duration__gt=7)[0]
+            self.product = products_backpacks.get(trip_duration__gt=7)
 
         # Loop through all products in the list
-        for product in products:
+        for product in products_items:
 
             # Find the base qtd for this temperature range
             qtd = self.get_product_base_qtd(product, self.temp)
