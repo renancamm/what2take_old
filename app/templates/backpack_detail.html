@@ -6,82 +6,103 @@
 
 {% block content %}
 
-<div class="row justify-content-center mt-5">
-    <div class="col-12 jumbotron">
 
-        <a href="{% url 'backpack-new' %}">← Voltar</a>
-        <h2 class="display-3">O que levar</h2>
 
-        <hr>
+<div class="row">
+    <div class="col-12">
+    <a href="{% url 'backpack-new' %}">← Voltar</a>
+    </div>
+</div>
 
+<div class="row">
+    <div class="col-8">
+        <h1>O que levar</h1>
+    </div>
+    <div class="col-4">
         <ul>
             <li>Temperatura: {{ context.backpack.temp }}</li>
             <li>Dias: {{ context.backpack.days }}</li>
             <li>Sexo: {{ context.backpack.sex }}</li>
         </ul>
-
     </div>
 </div>
 
-<div class="row justify-content-center">
+
+
+<hr><!-- _________________________________________________ -->
+
+
+
+<div class="row">
     <div class="col-12">
-        <h3>Sua mochila</h3>
+        <h2>Sua mochila</h2>
+    </div>
+</div>
 
-            <h5>Mochila</h5>
-                    <div class="card m-1" style="width: 146px;">
-                      <img src="{{ context.backpack.product.image.url }}" class="card-img-top" alt="{{ context.backpack.product.name }}" style="object-fit: contain; height: 100px; padding: 10px;">
-                      <div class="card-body">
-                        <h6 class="card-title">
-                        <a href="{% url 'product-detail' context.backpack.pk context.backpack.product.pk %}">
-                        {{ context.backpack.product.name }}
-                        </a>
-                        </h6>
-                      </div>
-                    </div>
-
-
-
-
-
-
-            {% for category in context.categories %}
-                <h5>{{ category.name }}</h5>
-                <div style="display: flex; align-items: left; flex-wrap: wrap;">
-                {% for item in context.items %}
-                    {% if item.product.category == category %}
+{% if context.backpack.product %}
+<div class="row">
+    <div class="col-2">
+        <img src="{{ context.backpack.product.image.url }}" alt="{{ context.backpack.product.name }}">
+    </div>
+    <div class="col-10">
+        <h3>
+            <a href="{% url 'product-detail' context.backpack.pk context.backpack.product.pk %}">
+                {{ context.backpack.product.name }}
+            </a>
+        </h3>
+        <p>{{ context.backpack.product.description }}</p>
+    </div>
+</div>
+{% endif %}
 
 
-                    <div class="card m-1" style="width: 146px;">
-                      <img src="{{ item.product.image.url }}" class="card-img-top" alt="{{ item.product.name }}" style="object-fit: contain; height: 100px; padding: 10px;">
-                      <div class="card-body">
-                        <h6 class="card-title">
-                        <a href="{% url 'product-detail' context.backpack.pk item.product.pk %}">
-                        {{ item.product.name }}
-                        </a>
-                        </h6>
-                        <p class="card-text small">x{{ item.qtd }}</p>
-                      </div>
-                    </div>
+
+<hr><!-- _________________________________________________ -->
 
 
-                    {% endif %}
-                {% endfor %}
-                </div>
-            <hr class="my-5">
-            {% endfor %}
-
-
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Salvar?</button>
-            <hr class="my-5">
-
+<!-- Category block START -->
+{% for category in context.categories %}
+<div class="row">
+    <div class="col-12">
+        <h4>{{ category.name }}</h4>
     </div>
 </div>
 
 
 
+<div class="row">
+    {% for item in context.items %}
+    {% if item.product.category == category %}
+    <div class="col-2">
+        
+
+        <!-- Product block START -->
+        <div>
+            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+        </div>
+        <h5>
+            <a href="{% url 'product-detail' context.backpack.pk item.product.pk %}">
+                {{ item.product.name }}
+            </a>
+        </h5>
+        <p>x{{ item.qtd }}</p>
+        <!-- Product block END-->
 
 
 
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+
+
+<hr><!-- _________________________________________________ -->
+
+
+
+{% endfor %}
+<!-- Category block END -->
 
 
 

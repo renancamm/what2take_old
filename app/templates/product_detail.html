@@ -6,13 +6,36 @@
 
 {% block content %}
 
-<a href="{% url 'backpack-detail' context.backpack.pk %}">← Voltar</a>
 
-<p>{{ context.product.category }}</p>
-<h1>{{ context.product.name }}</h1>
-<div>
-    <img src="{{context.product.image.url}}" height="300px">
+
+<div class="row">
+    <div class="col-12">
+        <a href="{% url 'backpack-detail' context.backpack.pk %}">
+            ← Voltar
+        </a>
+    </div>
 </div>
-<p>{{ context.product.description }}</p>
+
+
+
+<div class="row">
+    <div class="col-12">
+        <p>{{ context.product.category }}</p>
+        <h1>{{ context.product.name }}</h1>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-4">
+        <img src="{{context.product.image.url}}">
+    </div>
+    <div class="col-8">
+        <p>{{ context.product.description }}</p>
+    </div>
+</div>
+
+
 
 {% endblock %}
