@@ -90,11 +90,11 @@ class Backpack(models.Model):
 
         # Get the first backpack that match the trip duration
         if self.days <= 3:
-            self.product = products_backpacks.get(trip_duration__lte=3)
+            self.product = products_backpacks.filter(trip_duration__lte=3).first()
         elif self.days <= 7:
-            self.product = products_backpacks.get(trip_duration__lte=7)
+            self.product = products_backpacks.filter(trip_duration__lte=7).first()
         else:
-            self.product = products_backpacks.get(trip_duration__gt=7)
+            self.product = products_backpacks.filter(trip_duration__gt=7).first()
 
         # Loop through all products in the list
         for product in products_items:

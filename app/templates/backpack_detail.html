@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load staticfiles %}
+
 {% block title %}
   <title>O que levar – Sua mochila</title>
 {% endblock %}
@@ -9,21 +11,36 @@
 
 
 <div class="row">
-    <div class="col-12">
-    <a href="{% url 'backpack-new' %}">← Voltar</a>
-    </div>
-</div>
-
-<div class="row">
     <div class="col-8">
         <h1>O que levar</h1>
     </div>
-    <div class="col-4">
-        <ul>
-            <li>Temperatura: {{ context.backpack.temp }}</li>
-            <li>Dias: {{ context.backpack.days }}</li>
-            <li>Sexo: {{ context.backpack.sex }}</li>
-        </ul>
+    <div class="col-4 backpack-summary">
+                {% if context.backpack.temp < 10 %}
+                <img src="{% static 'app/images/icons8-snow-storm-100.png' %}" alt="Muito frio">
+                {% elif context.backpack.temp < 20 %}
+                <img src="{% static 'app/images/icons8-haze-100.png' %}" alt="Frio">
+                {% elif context.backpack.temp < 30 %}
+                <img src="{% static 'app/images/icons8-sun-100.png' %}" alt="Quente">
+                {% else %}
+                <img src="{% static 'app/images/icons8-summer-100.png' %}" alt="Muito quente">
+                {% endif %}
+
+                {% if context.backpack.days < 7 %}
+                <img src="{% static 'app/images/icons8-calendar-3-100.png' %}" alt="3">
+                {% elif context.backpack.days < 11 %}
+                <img src="{% static 'app/images/icons8-calendar-7-100.png' %}" alt="7">
+                {% elif context.backpack.days < 14 %}
+                <img src="{% static 'app/images/icons8-calendar-11-100.png' %}" alt="11">
+                {% else %}
+                <img src="{% static 'app/images/icons8-calendar-14-100.png' %}" alt="+14">
+                {% endif %}
+
+                {% if context.backpack.sex == m %}
+                <img src="{% static 'app/images/icons8-user-male-100.png' %}" alt="Homem">
+                {% else %}
+                <img src="{% static 'app/images/icons8-female-user-100.png' %}" alt="Mulher">
+                {% endif %}
+
     </div>
 </div>
 
@@ -35,6 +52,7 @@
 
 <div class="row">
     <div class="col-12">
+        <p><a href="{% url 'backpack-new' %}">← Voltar</a></p>
         <h2>Sua mochila</h2>
     </div>
 </div>
@@ -73,24 +91,26 @@
 <div class="row">
     {% for item in context.items %}
     {% if item.product.category == category %}
-    <div class="col-2">
-        
-
-        <!-- Product block START -->
-        <div>
-            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-        </div>
-        <h5>
-            <a href="{% url 'product-detail' context.backpack.pk item.product.pk %}">
-                {{ item.product.name }}
-            </a>
-        </h5>
-        <p>x{{ item.qtd }}</p>
-        <!-- Product block END-->
 
 
 
+    <!-- Item block START -->
+    <div class="col-lg-2 col-md-3 col-sm-6 item-wrapper">
+        <a class="item-card" href="{% url 'product-detail' context.backpack.pk item.product.pk %}">
+            <div class="item-thumbnail" style="background-image: url('{{ item.product.image.url }}')">
+            </div>
+            <div class="item-body">
+                <h5>{{ item.product.name }}</h5>
+                {% if item.qtd > 1 %}
+                <p><small>x</small>{{ item.qtd }}</p>
+                {% endif %}
+            </div>
+        </a>
     </div>
+    <!-- Item block END-->
+
+
+
     {% endif %}
     {% endfor %}
 </div>

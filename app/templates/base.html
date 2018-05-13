@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,38 +10,10 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-  <!-- temporary css -->
-  <style>
-  .row img {
-      max-width: 100%;
-      width: auto;
-      height:100px;
-      object-fit: contain;
-  }
+  <!-- Main CSS -->
+  <link rel="stylesheet" type="text/css" href='{% static "app/css/styles.css" %}'>
 
-form ul > li {
-  display: inline-block;
-}
 
-form ul > li > label {
-  display: block;
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-  border: solid 1px gray;
-}
-
-form ul > li > input:checked + label {
-  border: solid 2px blue;
-}
-
-form ul > li > input {
-  opacity: 0;
-  position: absolute;
-}
-}
-
-  </style>
 
   {% block title %}
   <title>O que levar</title>

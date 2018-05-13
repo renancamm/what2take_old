@@ -1,0 +1,129 @@
+/* Global */
+
+body {
+  background-color: #f3f3f3;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+/* Details view */
+
+.backpack-summary {
+  text-align: right;
+}
+
+.backpack-summary img {
+  width: 50px;
+}
+
+.item-wrapper {
+  padding: 14px;
+}
+
+.item-card {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #ffffff;
+
+}
+
+.item-thumbnail {
+  height: 200px;
+  background-size: cover;
+  background-position: center top;
+}
+
+.item-body {
+  padding: 20px;
+}
+
+.item-body p {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 28px;
+    height: 32px;
+    width: 32px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 1000px;
+    text-align: center;
+}
+
+
+
+
+
+/* New backpack view */
+
+form ul {
+  padding: 0;
+}
+
+form ul > li {
+  display: inline-block;
+}
+
+form ul > li > label {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: solid 2px #ffffff;
+  border-radius: 4px;
+  opacity: 1;
+  margin-right: 10px;
+  background-color: white;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+form ul > li > input:checked + label {
+  border: solid 2px #007bff;
+  background-color: #f6f7fe;
+  opacity: 1;
+}
+
+form ul > li > label > span {
+  display: block;
+  position: relative;
+  top: 105px;
+  font-size: 0.8em;
+}
+
+form ul > li > input {
+  opacity: 0;
+  position: absolute;
+}
+
+form ul > li > label[for=id_temp_0] { background-image: url("../images/icons8-snow-storm-100.png"); }
+form ul > li > label[for=id_temp_1] { background-image: url("../images/icons8-haze-100.png"); }
+form ul > li > label[for=id_temp_2] { background-image: url("../images/icons8-sun-100.png"); }
+form ul > li > label[for=id_temp_3] { background-image: url("../images/icons8-summer-100.png"); }
+
+form ul > li > label[for=id_days_0] { background-image: url("../images/icons8-calendar-3-100.png"); }
+form ul > li > label[for=id_days_1] { background-image: url("../images/icons8-calendar-7-100.png"); }
+form ul > li > label[for=id_days_2] { background-image: url("../images/icons8-calendar-11-100.png"); }
+form ul > li > label[for=id_days_3] { background-image: url("../images/icons8-calendar-14-100.png"); }
+
+form ul > li > label[for=id_sex_0] { background-image: url("../images/icons8-user-male-100.png"); }
+form ul > li > label[for=id_sex_1] { background-image: url("../images/icons8-female-user-100.png"); }
+
