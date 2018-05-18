@@ -1,0 +1,1572 @@
+
+  [
+    {
+      "model": "app.product",
+      "pk": 1,
+      "fields": {
+        "name": "Calça grossa",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": true,
+        "qtd_cold": 1.5,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/calca-grossa-homem.jpg",
+        "description": "Nos dias de frio é bom ter uma calça quentinha. Prefira tecidos grossos, que esquentem e que não deixem o vento passar, como sarja, flanela, gabardine e veludo. Um modelo de corte clássico e de cor neutra é a melhor opção para você ter uma peça-chave, que pode ser usada de dia ou de noite."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 2,
+      "fields": {
+        "name": "Calça grossa",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": true,
+        "qtd_cold": 1.5,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/calca-grossa-mulher.jpg",
+        "description": "Nos dias de frio é bom ter uma calça quentinha. Prefira tecidos grossos, que esquentem e que não deixem o vento passar, como sarja, flanela, gabardine e veludo. Um modelo de corte clássico e de cor neutra é a melhor opção para você ter uma peça-chave, que pode ser usada de dia ou de noite."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 3,
+      "fields": {
+        "name": "Jeans",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": true,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/jeans-homem.jpg",
+        "description": "O jeans é aquela peça que vai servir para todos os momentos da sua viagem, do passeio turístico durante o dia ao jantar num restaurante mais legal, portanto, leve um que seja confortável, molinho e, de preferência, básico, sem muitos detalhes, assim, não terá erro na hora de montar combinações."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 4,
+      "fields": {
+        "name": "Jeans",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": true,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/jeans-mulher.jpg",
+        "description": "O jeans é aquela peça que vai servir para todos os momentos da sua viagem, do passeio turístico durante o dia ao jantar num restaurante mais legal, portanto, leve um que seja confortável, molinho e, de preferência, básico, sem muitos detalhes, assim, não terá erro na hora de montar combinações."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 5,
+      "fields": {
+        "name": "Calça leve",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": true,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 1,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/calca-leve.jpg",
+        "description": "Para dias quentes, prefira levar uma calça de tecido leve e fresquinho, como de fibras naturais, que são mais respiráveis. Evite tecidos puros como o poliéster, que retém o calor. Cores ou estampas claras são mais adequadas, já que esquentam menos que cores escuras. Pantalona, pantacourt e sarouel são ótimos modelos para o calor."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 6,
+      "fields": {
+        "name": "Short",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": true,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 2,
+        "qtd_warm": 3,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/short-homem.jpg",
+        "description": "Para o calor, não deixe de levar shorts de tecidos leves, frescos e confortáveis. Se for levar mais de um, tente variar nas cores ou estampas para ter mais combinações durante a viagem. Você também pode variar nos tipos de tecidos para ter opções para o dia e para a noite."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 7,
+      "fields": {
+        "name": "Short",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": true,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 2,
+        "qtd_warm": 3,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/short-mulher.jpg",
+        "description": "Para o calor, não deixe de levar shorts de tecidos leves, frescos e confortáveis. Se for levar mais de um, tente variar nas cores ou estampas para ter mais combinações durante a viagem. Opte por modelos mais clássicos, que podem ser usados de dia e de noite. Deixe de lado aqueles causam assaduras entre as coxas por serem curtos demais ou apertados demais."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 8,
+      "fields": {
+        "name": "Calça térmica",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 0,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/calca-termica-homem.jpg",
+        "description": "A calça térmica é uma peça essencial em dias muito frios. Feita para ser usada  como segunda pele, por baixo da roupa, ou até como pijama. Geralmente é feita de poliéster e felpada na parte interna, para um melhor isolamento térmico. Ideal para viagens em cidades com temperaturas perto de 0 grau e para atividades na neve."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 9,
+      "fields": {
+        "name": "Calça térmica",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 0,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/calca-termica-mulher.jpg",
+        "description": "A calça térmica é uma peça essencial em dias muito frios. Feita para ser usada  como segunda pele, por baixo da roupa, ou até como pijama. Geralmente é feita de poliéster e felpada na parte interna, para um melhor isolamento térmico. Ideal para viagens em cidades com temperaturas perto de 0 grau e para atividades na neve."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 10,
+      "fields": {
+        "name": "Camiseta básica",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": true,
+        "qtd_cold": 0,
+        "qtd_cool": 4,
+        "qtd_hot": 6,
+        "qtd_warm": 6,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/camiseta-basica-homem.jpg",
+        "description": "Leve várias camisetas que você possa combinar com o restante das suas roupas durante a viagem. Prefira cores e cortes básicos. Dentre as opções, escolha levar uma mais arrumadinha para eventos durante a noite, como um jantar ou uma balada."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 11,
+      "fields": {
+        "name": "Camiseta básica",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": true,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 5,
+        "qtd_warm": 5,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/camiseta-basica-mulher.jpg",
+        "description": "Leve várias camisetas e blusinhas que você possa combinar com o restante das suas roupas durante a viagem. Além de camisetinhas básicas para o dia a dia, não deixe de levar opções mais diferentes que podem ser aproveitadas de dia e de noite, como frente única, e ombro caído, por exemplo."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 12,
+      "fields": {
+        "name": "Camiseta comprida",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": true,
+        "qtd_cold": 5,
+        "qtd_cool": 2,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/camiseta-comprida-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 13,
+      "fields": {
+        "name": "Camiseta comprida",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": true,
+        "qtd_cold": 5,
+        "qtd_cool": 6,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/camiseta-comprida-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 14,
+      "fields": {
+        "name": "Camisa grossa",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/camisa-grossa-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 15,
+      "fields": {
+        "name": "Camisa leve",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/camisa-leve-homen.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 16,
+      "fields": {
+        "name": "Vestido leve",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": true,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 2,
+        "qtd_warm": 2,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/vestido-leve-mulher.jpg",
+        "description": "Verão pede frescor, por isso, em viagens para lugares quentes, não deixe de levar opções leves. Opte por uma peça-chave que você possa usar de dia e de noite. Evite vestidos muito esvoaçantes para não ter que ficar se preocupando em segurá-lo enquanto tenta curtir o destino. Uma boa opção são vestido sequinhos, com cores neutras."
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 17,
+      "fields": {
+        "name": "Vestido grosso",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/vestido-grosso.jpg",
+        "description": "Para estar mais arrumadinha em um destino frio, você pode optar por levar um vestido de tecido grosso, como lã ou veludo, por exemplo. Para jantares, baladas ou outros eventos que pedem uma roupa mais sóbria, essa é uma boa opção para ter na mochila. Basta colocar uma meia-calça e voilà!"
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 18,
+      "fields": {
+        "name": "Blusa fleece",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 0,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/fleece-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 19,
+      "fields": {
+        "name": "Blusa fleece",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 0,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/fleece-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 20,
+      "fields": {
+        "name": "Blusa lã",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/blusa-la-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 21,
+      "fields": {
+        "name": "Blusa lã",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/blusa-la-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 22,
+      "fields": {
+        "name": "Calcinha",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": true,
+        "qtd_cold": 7.5,
+        "qtd_cool": 7.5,
+        "qtd_hot": 7.5,
+        "qtd_warm": 7.5,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/calcinha.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 23,
+      "fields": {
+        "name": "Cueca",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": true,
+        "qtd_cold": 7.5,
+        "qtd_cool": 7.5,
+        "qtd_hot": 7.5,
+        "qtd_warm": 7.5,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/cueca-homen.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 24,
+      "fields": {
+        "name": "Sutiã",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": true,
+        "qtd_cold": 1.5,
+        "qtd_cool": 1.5,
+        "qtd_hot": 1.5,
+        "qtd_warm": 1.5,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/sutia.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 25,
+      "fields": {
+        "name": "Meia",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": true,
+        "qtd_cold": 5,
+        "qtd_cool": 5,
+        "qtd_hot": 5,
+        "qtd_warm": 5,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/meia-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 26,
+      "fields": {
+        "name": "Meia",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": true,
+        "qtd_cold": 5,
+        "qtd_cool": 5,
+        "qtd_hot": 5,
+        "qtd_warm": 5,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/meia-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 27,
+      "fields": {
+        "name": "Casaco grosso",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/casaco-grosso-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 28,
+      "fields": {
+        "name": "Casaco grosso",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/casaco-grosso-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 29,
+      "fields": {
+        "name": "Pijama inverno",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/piajama-inverno-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 30,
+      "fields": {
+        "name": "Pijama inverno",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/pijama-inverno-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 31,
+      "fields": {
+        "name": "Pijama verão",
+        "category": 1,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/pijama-verao-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 32,
+      "fields": {
+        "name": "Pijama verão",
+        "category": 1,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/piajama-verao-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 33,
+      "fields": {
+        "name": "Meia-calça",
+        "category": 2,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/meia-calca.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 34,
+      "fields": {
+        "name": "Rasteirinha",
+        "category": 2,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/rasteirinha.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 35,
+      "fields": {
+        "name": "Tênis casual",
+        "category": 2,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/tenis-casual-homen.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 36,
+      "fields": {
+        "name": "Tênis casual",
+        "category": 2,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/tenis-casual-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 37,
+      "fields": {
+        "name": "Bota casual",
+        "category": 2,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 0,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/bota-casual-homen.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 38,
+      "fields": {
+        "name": "Bota casual",
+        "category": 2,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/bota-casual-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 39,
+      "fields": {
+        "name": "Chinelo",
+        "category": 2,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/chinelo-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 40,
+      "fields": {
+        "name": "Chinelo",
+        "category": 2,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/chinelo-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 41,
+      "fields": {
+        "name": "Luva",
+        "category": 2,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 0,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/luva-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 42,
+      "fields": {
+        "name": "Luva",
+        "category": 2,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 0,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/luva-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 43,
+      "fields": {
+        "name": "Gorro",
+        "category": 2,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/gorro-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 44,
+      "fields": {
+        "name": "Gorro",
+        "category": 2,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/gorro-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 45,
+      "fields": {
+        "name": "Cachecol",
+        "category": 2,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/cachecol-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 46,
+      "fields": {
+        "name": "Cachecol",
+        "category": 2,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/cachecol-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 47,
+      "fields": {
+        "name": "Óculos de sol",
+        "category": 2,
+        "for_male": true,
+        "for_female": false,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/oculos-de-sol-homem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 48,
+      "fields": {
+        "name": "Óculos de sol",
+        "category": 2,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/oculos-de-sol-mulher.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 49,
+      "fields": {
+        "name": "Bolsinha",
+        "category": 2,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/bolsinha.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 50,
+      "fields": {
+        "name": "Escova de dente",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/escova-de-dentes-homen.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 51,
+      "fields": {
+        "name": "Pasta de dente",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/pasta-de-dente.jpeg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 52,
+      "fields": {
+        "name": "Fio dental",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/fio-dental.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 53,
+      "fields": {
+        "name": "Mini Shampoo",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/shampoo.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 54,
+      "fields": {
+        "name": "Mini Condicionador",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/condicionador.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 55,
+      "fields": {
+        "name": "Sabonete barra",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/sabonete.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 56,
+      "fields": {
+        "name": "Desodorante",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/desodorante-rollon.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 57,
+      "fields": {
+        "name": "Pente ou Escova",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/escova-de-cabelo.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 58,
+      "fields": {
+        "name": "Secador ou Chapinha",
+        "category": 4,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/secador.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 59,
+      "fields": {
+        "name": "Toalha microfibra",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/toalha-de-microfibra.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 60,
+      "fields": {
+        "name": "Protetor solar",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/protetor-solar.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 61,
+      "fields": {
+        "name": "Necessaire maquiagem",
+        "category": 4,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/necessaire-maquiagem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 62,
+      "fields": {
+        "name": "Prendedor de cabelo",
+        "category": 4,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/prendedor-de-cabelo.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 63,
+      "fields": {
+        "name": "Demaquilante",
+        "category": 4,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/demaquilante.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 64,
+      "fields": {
+        "name": "Lâmina de barbear",
+        "category": 4,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/lamina-de-barbear.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 65,
+      "fields": {
+        "name": "Dores e Febre",
+        "category": 5,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product-placeholder.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 66,
+      "fields": {
+        "name": "Dores muscular",
+        "category": 5,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product-placeholder.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 67,
+      "fields": {
+        "name": "Antigripal",
+        "category": 5,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product-placeholder.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 68,
+      "fields": {
+        "name": "Má digestão",
+        "category": 5,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product-placeholder.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 69,
+      "fields": {
+        "name": "Enjoo",
+        "category": 5,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product-placeholder.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 70,
+      "fields": {
+        "name": "Diarréria",
+        "category": 5,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product-placeholder.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 71,
+      "fields": {
+        "name": "Band-aid",
+        "category": 5,
+        "for_male": false,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product-placeholder.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 72,
+      "fields": {
+        "name": "Antialérgico",
+        "category": 5,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product-placeholder.png",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 73,
+      "fields": {
+        "name": "Fones de ouvido ",
+        "category": 6,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/fones-de-ouvido.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 74,
+      "fields": {
+        "name": "Powerbank",
+        "category": 6,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/powerbank.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 75,
+      "fields": {
+        "name": "Carregador celular",
+        "category": 6,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/carregador-celular.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 76,
+      "fields": {
+        "name": "Adaptador de tomada",
+        "category": 6,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/adaptador-universal.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 77,
+      "fields": {
+        "name": "Cadeado",
+        "category": 6,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 1,
+        "qtd_cool": 1,
+        "qtd_hot": 1,
+        "qtd_warm": 1,
+        "is_backpack": false,
+        "trip_duration": 0,
+        "image": "product/cadeado-viagem.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 78,
+      "fields": {
+        "name": "Mochila pequena",
+        "category": 7,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": true,
+        "trip_duration": 3,
+        "image": "product/mochila-pequena.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 79,
+      "fields": {
+        "name": "Mochila média",
+        "category": 7,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": true,
+        "trip_duration": 7,
+        "image": "product/mochila-media.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.product",
+      "pk": 80,
+      "fields": {
+        "name": "Mochila grande",
+        "category": 7,
+        "for_male": true,
+        "for_female": true,
+        "multiply_by_days": false,
+        "qtd_cold": 0,
+        "qtd_cool": 0,
+        "qtd_hot": 0,
+        "qtd_warm": 0,
+        "is_backpack": true,
+        "trip_duration": 11,
+        "image": "product/mochila-grande.jpg",
+        "description": ""
+      }
+    },
+    {
+      "model": "app.category",
+      "pk": 1,
+      "fields": {
+        "name": "Roupas"
+      }
+    },
+    {
+      "model": "app.category",
+      "pk": 2,
+      "fields": {
+        "name": "Calçados e Acessórios"
+      }
+    },
+    {
+      "model": "app.category",
+      "pk": 3,
+      "fields": {
+        "name": "Atividades"
+      }
+    },
+    {
+      "model": "app.category",
+      "pk": 4,
+      "fields": {
+        "name": "Beleza e Higiene"
+      }
+    },
+    {
+      "model": "app.category",
+      "pk": 5,
+      "fields": {
+        "name": "Farmacinha"
+      }
+    },
+    {
+      "model": "app.category",
+      "pk": 6,
+      "fields": {
+        "name": "Utilidades e Eletrônicos"
+      }
+    },
+    {
+      "model": "app.category",
+      "pk": 7,
+      "fields": {
+        "name": "Mochila"
+      }
+    }
+  ]
