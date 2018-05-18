@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 from django.utils.html import mark_safe
 
@@ -72,6 +73,7 @@ class Backpack(models.Model):
         ('f', 'Mulher'),
     )
 
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False)
     temp = models.IntegerField(choices=TEMP_CHOICES, default=20)
     days = models.IntegerField(choices=DAYS_CHOICES, default=7)
     sex = models.CharField(max_length=1, choices=SEX_CHOICES, default='f')

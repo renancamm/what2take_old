@@ -2,7 +2,7 @@ from django.http import Http404
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .forms import BackpackForm
-from .models import Category, Product, Backpack
+from .models import Product, Backpack
 
 
 def backpack_new(request):
@@ -12,15 +12,15 @@ def backpack_new(request):
             new_backpack = form.save()
             new_backpack.add_products()
             new_backpack.save()
-            return redirect('backpack-detail', backpack_id=new_backpack.pk)
+            return redirect('backpack-detail', backpack_uuid=new_backpack.uuid)
     else:
         form = BackpackForm()
     return render(request, 'backpack_new.html', {'form': form})
 
 
-def backpack_detail(request, backpack_id):
+def backpack_detail(request, backpack_uuid):
     try:
-        backpack = Backpack.objects.get(pk=backpack_id)
+        backpack = Backpack.objects.get(uuid=backpack_uuid)
         items = backpack.backpackitem_set.all()
 
         # Build category list
@@ -40,9 +40,9 @@ def backpack_detail(request, backpack_id):
     return render(request, 'backpack_detail.html', {'context': context})
 
 
-def product_detail(request, backpack_id, product_id):
+def product_detail(request, backpack_uuid, product_id):
     try:
-        backpack = Backpack.objects.get(pk=backpack_id)
+        backpack = Backpack.objects.get(uuid=backpack_uuid)
         product = Product.objects.get(pk=product_id)
         context = {'backpack': backpack, 'product': product}
     except backpack.DoesNotExist:

@@ -64,7 +64,7 @@
     </div>
     <div class="col-10">
         <h3>
-            <a href="{% url 'product-detail' context.backpack.pk context.backpack.product.pk %}">
+            <a href="{% url 'product-detail' context.backpack.uuid context.backpack.product.pk %}">
                 {{ context.backpack.product.name }}
             </a>
         </h3>
@@ -92,7 +92,7 @@
 
     <!-- Item block START -->
     <div class="col-lg-2 col-md-3 col-sm-6 item-wrapper">
-        <a class="item-card" href="{% url 'product-detail' context.backpack.pk item.product.pk %}">
+        <a class="item-card" href="{% url 'product-detail' context.backpack.uuid item.product.pk %}">
             <div class="item-thumbnail" style="background-image: url('{{ item.product.image.url }}')">
             </div>
             <div class="item-body">
