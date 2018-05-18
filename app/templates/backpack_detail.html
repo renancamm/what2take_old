@@ -68,7 +68,7 @@
                 {{ context.backpack.product.name }}
             </a>
         </h3>
-        <p>{{ context.backpack.product.description }}</p>
+        {{ context.backpack.product.description|linebreaks }}
     </div>
 </div>
 {% endif %}

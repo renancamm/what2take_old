@@ -64,7 +64,7 @@
     <div class="col-6">
         <p class="mb-0">{{ context.product.category }}</p>
         <h2 class="mt-0">{{ context.product.name }}</h2>
-        <p>{{ context.product.description }}</p>
+        {{ context.product.description|linebreaks }}
     </div>
 </div>
 
