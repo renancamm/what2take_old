@@ -2,6 +2,13 @@ from django.contrib import admin
 from .models import Category, Product, Backpack, BackpackItem
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'order',
+    )
+
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'image_thumb_small',
@@ -65,6 +72,6 @@ class BackpackAdmin(admin.ModelAdmin):
     ]
 
 
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Backpack, BackpackAdmin)

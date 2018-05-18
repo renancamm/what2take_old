@@ -4,6 +4,10 @@ from django.utils.html import mark_safe
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
+    order = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ['order']
 
     def __str__(self):
         return self.name

@@ -22,8 +22,18 @@ def backpack_detail(request, backpack_id):
     try:
         backpack = Backpack.objects.get(pk=backpack_id)
         items = backpack.backpackitem_set.all()
-        categories = Category.objects.all()
+
+        # Build category list
+        categories = []
+        for item in items:
+            if item.product.category not in categories:
+                categories.append(item.product.category)
+
+        # Sorte categories based on 'order' property
+        categories.sort(key=lambda x: x.order)
+
         context = {'backpack': backpack, 'items': items, 'categories': categories}
+
     except backpack.DoesNotExist:
         raise Http404("Backpack does not exist")
 
