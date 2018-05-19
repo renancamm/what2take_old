@@ -11,10 +11,10 @@
 
 
 <div class="row">
-    <div class="col-8">
+    <div class="col-6">
         <h1>O que levar</h1>
     </div>
-    <div class="col-4 backpack-summary">
+    <div class="col-6 backpack-summary">
                 {% if context.backpack.temp < 10 %}
                 <img src="{% static 'app/images/icons8-snow-storm-100.png' %}" alt="Muito frio">
                 {% elif context.backpack.temp < 20 %}
@@ -91,7 +91,7 @@
     {% if item.product.category == category %}
 
     <!-- Item block START -->
-    <div class="col-lg-2 col-md-3 col-sm-6 item-wrapper">
+    <div class="col-lg-2 col-md-3 col-6 item-wrapper">
         <a class="item-card" href="{% url 'product-detail' context.backpack.uuid item.product.pk %}">
             <div class="item-thumbnail" style="background-image: url('{{ item.product.image.url }}')">
             </div>
