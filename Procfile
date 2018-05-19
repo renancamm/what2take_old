@@ -1,0 +1,1 @@
+web: gunicorn what2take.wsgi
