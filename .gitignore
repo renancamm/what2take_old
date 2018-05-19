@@ -97,7 +97,3 @@ ENV/
 
 # mypy
 .mypy_cache/
-
-# what2take development env
-*.sqlite3
-media/*/
