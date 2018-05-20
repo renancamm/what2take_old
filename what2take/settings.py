@@ -135,4 +135,7 @@ MEDIA_URL = '/media/'
 
 # Configure Django App for Heroku.
 
-django_heroku.settings(locals())
+if os.environ['DJANGO_ENV'] == 'production':
+    DEBUG = False
+    SECRET_KEY = os.environ['SECRET_KEY']
+    django_heroku.settings(locals())
