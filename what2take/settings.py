@@ -136,7 +136,7 @@ MEDIA_URL = '/media/'
 # Configure Django App for Heroku and production mode.
 try:
     if os.environ['DJANGO_ENV'] == 'production':
-        DEBUG = False
+        DEBUG = True  # Temporary solution!!!
         SECRET_KEY = os.environ['SECRET_KEY']
 except KeyError:
     print('# Running development mode')
