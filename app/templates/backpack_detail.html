@@ -48,31 +48,33 @@
 
 <hr><!-- _________________________________________________ -->
 
-
+<!-- BackpackItem block START -->
+{% if context.backpack.product %}
 
 <div class="row">
     <div class="col-12">
         <p><a href="{% url 'backpack-new' %}">← Voltar</a></p>
-        <h2>Sua mochila</h2>
+        <h4>{{ context.backpack.product.category }}</h4>
     </div>
 </div>
 
-{% if context.backpack.product %}
+
 <div class="row">
-    <div class="col-2">
+    <div class="col-lg-2 col-md-3 col-6">
         <img src="{{ context.backpack.product.image.url }}" alt="{{ context.backpack.product.name }}">
     </div>
-    <div class="col-10">
-        <h3>
+    <div class="col">
+        <h5>
             <a href="{% url 'product-detail' context.backpack.uuid context.backpack.product.pk %}">
                 {{ context.backpack.product.name }}
             </a>
-        </h3>
+        </h5>
         {{ context.backpack.product.description|linebreaks }}
     </div>
 </div>
-{% endif %}
 
+{% endif %}
+<!-- BackpackItem block END -->
 
 
 <hr><!-- _________________________________________________ -->
