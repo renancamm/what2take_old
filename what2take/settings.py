@@ -133,9 +133,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-# Configure Django App for Heroku.
-
-if os.environ['DJANGO_ENV'] == 'production':
-    DEBUG = False
-    SECRET_KEY = os.environ['SECRET_KEY']
-    django_heroku.settings(locals())
+# Configure Django App for Heroku and production mode.
+try:
+    if os.environ['DJANGO_ENV'] == 'production':
+        DEBUG = False
+        SECRET_KEY = os.environ['SECRET_KEY']
+except KeyError:
+    print('# Running development mode')
+django_heroku.settings(locals())
