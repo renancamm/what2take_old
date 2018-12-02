@@ -12,3 +12,9 @@ class BackpackForm(forms.ModelForm):
             'start_date': DatePickerInput(),
             'end_date': DatePickerInput()
         }
+        labels = {
+            'place': "Para onde?",
+            'start_date': "Data do começo",
+            'end_date': "Data do fim",
+            'sex': "Você se identifica como?"
+        }

@@ -1,7 +1,7 @@
 import uuid
 from django.db import models
 from django.utils.html import mark_safe
-from datetime import date
+from datetime import date, timedelta
 
 
 class Category(models.Model):
@@ -61,11 +61,14 @@ class Backpack(models.Model):
         ('f', 'Mulher'),
     )
 
+    def default_end_date():
+        return date.today() + timedelta(days=7)
+
     uuid = models.UUIDField(default=uuid.uuid4, editable=False)
     place = models.CharField(max_length=1024, null=True)
     temp = models.IntegerField(default=20)
     start_date = models.DateField(default=date.today)
-    end_date = models.DateField(default=date.today)
+    end_date = models.DateField(default=default_end_date)
     days = models.IntegerField(default=7)
     sex = models.CharField(max_length=1, choices=SEX_CHOICES, default='f')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
