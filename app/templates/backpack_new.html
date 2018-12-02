@@ -3,6 +3,16 @@
 
 {% block extrahead %}
 {{ form.media }}
+
+<script>
+    var onLoaded = function() {
+        // I am assuming your field has id of where_load, it might be different
+        var location_input = document.getElementById('id_place');
+        var autocomplete = new google.maps.places.Autocomplete(location_input);
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl3ku9gJx-1uGJ7Jsmw8Qr7lWoBDVeVUM&libraries=places&callback=onLoaded" async defer></script>
+
 {% endblock %}
 
 {% block content %}
