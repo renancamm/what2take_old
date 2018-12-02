@@ -9,6 +9,7 @@ class BackpackForm(forms.ModelForm):
         model = Backpack
         fields = ['place', 'start_date', 'end_date', 'sex']
         widgets = {
+            'place': forms.TextInput(attrs={'placeholder': 'Paris, França', 'autofocus': 'autofocus'}),
             'start_date': DatePickerInput(),
             'end_date': DatePickerInput()
         }
