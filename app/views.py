@@ -3,6 +3,10 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from .forms import BackpackForm
 from .models import Product, Backpack
+from django.conf import settings
+from datetime import datetime, timedelta
+import googlemaps
+from darksky import forecast
 
 
 def backpack_new(request):
@@ -10,6 +14,25 @@ def backpack_new(request):
         form = BackpackForm(request.POST)
         if form.is_valid():
             new_backpack = form.save()
+
+            #Request geocode and weather forecast
+            gmaps = googlemaps.Client(key=settings.GOOGLEMAPS_KEY)
+            geocode_result = gmaps.geocode(request.POST['place'])
+            geocode_lat = geocode_result[0]['geometry']['location']['lat']
+            geocode_lng = geocode_result[0]['geometry']['location']['lng']
+            forecast_result = forecast(settings.DARKSKY_KEY, geocode_lat, geocode_lng, units='si')
+            forecast_temp = forecast_result.temperature
+            #Set temperarture
+            new_backpack.temp = forecast_temp
+
+            #Calculate time delta
+            delta_start = datetime.strptime(request.POST['start_date'], "%m/%d/%Y").date()
+            delta_end = datetime.strptime(request.POST['end_date'], "%m/%d/%Y").date()
+            delta = (delta_end - delta_start).days
+            #Set days
+            new_backpack.days = delta
+
+            #Set produt list
             new_backpack.add_products()
             new_backpack.save()
             return redirect('backpack-detail', backpack_uuid=new_backpack.uuid)

@@ -1,13 +1,14 @@
 from django import forms
 from .models import Backpack
+from bootstrap_datepicker_plus import DatePickerInput
 
 
 class BackpackForm(forms.ModelForm):
 
-    temp = forms.ChoiceField(label='Como é o seu destino?', choices=Backpack.TEMP_CHOICES, initial=30, widget=forms.RadioSelect())
-    days = forms.ChoiceField(label='Quanto tempo?', choices=Backpack.DAYS_CHOICES, initial=11, widget=forms.RadioSelect())
-    sex = forms.ChoiceField(label='Você se vê como...', choices=Backpack.SEX_CHOICES, initial='f', widget=forms.RadioSelect())
-
     class Meta:
         model = Backpack
-        fields = ('temp', 'days', 'sex')
+        fields = ['place', 'start_date', 'end_date', 'sex']
+        widgets = {
+            'start_date': DatePickerInput(),
+            'end_date': DatePickerInput()
+        }

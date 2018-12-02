@@ -1,7 +1,11 @@
 {% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block extrahead %}
+{{ form.media }}
+{% endblock %}
 
 {% block content %}
-
 
 <div class="row justify-content-center">
     <div class="col-lg-6 col-md-8 col-sm-12">
@@ -13,28 +17,9 @@
 
         <hr><!-- _________________________________________________ -->
 
-
-
         <form method="post">
             {% csrf_token %}
-
-            {% for field in form %}
-            <div class="fieldWrapper">
-                {{ field.errors }}
-                <h2>{{ field.label }}</h2>
-                <ul>
-                    {% for radio in field %}
-                    <li>
-                    {{ radio.tag }}
-                    <label for="{{ radio.id_for_label }}">
-                        <span>{{ radio.choice_label }}</span>
-                    </label>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% endfor %}
-
+            {% bootstrap_form form %}
             <button type="submit" class="btn btn-primary btn-lg btn-block my-5">Fazer a minha mala</button>
         </form>
 

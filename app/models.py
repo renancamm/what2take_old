@@ -1,6 +1,7 @@
 import uuid
 from django.db import models
 from django.utils.html import mark_safe
+from datetime import date
 
 
 class Category(models.Model):
@@ -55,27 +56,17 @@ class Product(models.Model):
 class Backpack(models.Model):
     DAYS_BASE = 7
     DAYS_LIMIT = 11
-
-    TEMP_CHOICES = (
-        (0, 'Muito frio'),
-        (10, 'Frio'),
-        (20, 'Quente'),
-        (30, 'Muito quente'),
-    )
-    DAYS_CHOICES = (
-        (3, '3 dias'),
-        (7, '7 dias'),
-        (11, '11 dias'),
-        (14, '+14 dias'),
-    )
     SEX_CHOICES = (
         ('m', 'Homem'),
         ('f', 'Mulher'),
     )
 
     uuid = models.UUIDField(default=uuid.uuid4, editable=False)
-    temp = models.IntegerField(choices=TEMP_CHOICES, default=20)
-    days = models.IntegerField(choices=DAYS_CHOICES, default=7)
+    place = models.CharField(max_length=1024, null=True)
+    temp = models.IntegerField(default=20)
+    start_date = models.DateField(default=date.today)
+    end_date = models.DateField(default=date.today)
+    days = models.IntegerField(default=7)
     sex = models.CharField(max_length=1, choices=SEX_CHOICES, default='f')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -147,7 +138,7 @@ class Backpack(models.Model):
         return qtd
 
     def __str__(self):
-        return '%s %s %s %s' % (self.temp, self.days, self.sex, self.created_at)
+        return '%s %s %s %s %s' % (self.place, self.temp, self.days, self.sex, self.created_at)
 
 
 class BackpackItem(models.Model):

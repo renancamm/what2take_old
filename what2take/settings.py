@@ -22,6 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = ')kk_e-2&$8g+%9fuza815c9wlh=nb!*zihzvb9lj-sx!qz59!('
+GOOGLEMAPS_KEY = 'AIzaSyBJDqFmPowfAgSFmWj7WYmSEWRSquA0-ww' #remove me!!!!!!!!!!!
+DARKSKY_KEY = 'fa0ccaa60b857f3d18d2973fd9ec240b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
+    'bootstrap4',
+    'bootstrap_datepicker_plus',
 ]
 
 MIDDLEWARE = [
