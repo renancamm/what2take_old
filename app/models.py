@@ -65,7 +65,7 @@ class Backpack(models.Model):
         return date.today() + timedelta(days=7)
 
     uuid = models.UUIDField(default=uuid.uuid4, editable=False)
-    place = models.CharField(max_length=1024, null=True)
+    place = models.CharField(max_length=1024, default='Paris, França')
     temp = models.IntegerField(default=20)
     start_date = models.DateField(default=date.today)
     end_date = models.DateField(default=default_end_date)
